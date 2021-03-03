@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	
+  <link rel="icon" href="data:,">
+  <title>Demo site</title>
+  <meta name="description" content="Demo site">
+  <meta name="author" content="Ben Burton">
+  <style>
+		*{
+		margin:0;
+		padding:0;
+		}
+		html{
+		height: 100%;
+		width: 100%;
+		}
+		body {
+		  height: 100%;
+		  width: 100%;
+		}
+		model-viewer{
+		height:100%;
+		width:100%;
+		}
+		
+    </style>
+</head>
+<body>
+  <!-- Import the component -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <!-- Use it like any other HTML element -->
+  <model-viewer src="Horse.glb" alt="A 3D model" auto-rotate camera-controls></model-viewer>
+</body>
+</html>
