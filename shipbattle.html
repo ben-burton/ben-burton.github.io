@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	
+  <link rel="icon" href="data:,">
+
+  <title>Demo site</title>
+  <meta name="description" content="Demo site">
+  <meta name="author" content="Ben Burton">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Helvetica, sans-serif;
+}
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: repeat(10, 25px);
+  grid-template-rows: repeat(10, 25px);
+  border: 1px solid black;
+  grid-gap: 1px;
+  background-color: black;
+  margin: 5px 5px;
+}
+.grid-item {
+  background-color: white;
+  text-align: center;
+  padding: 5px 5px;
+}
+.grid-container:hover {
+  cursor: crosshair;
+}
+.grid-item:not(.head):hover, .selected {
+  background-color: rgba(245, 229, 27, 1);
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    background-color: white;
+  }
+}
+</style>
+<script>
+function selectSquare(item) {
+    for (elem of document.getElementsByClassName("grid-item"))
+    {
+        elem.classList.remove("selected");
+    }
+
+    item.classList.add("selected");
+    document.getElementById("info").innerHTML = "Ready to fire at: " + item.id;
+}
+</script>
+</head>
+<body>
+
+<h1>Ship Battle</h1>
+
+<div class="grid-container">
+  <div class="grid-item head"></div>
+  <div class="grid-item head">A</div>
+  <div class="grid-item head">B</div>  
+  <div class="grid-item head">C</div>
+  <div class="grid-item head">D</div>
+  <div class="grid-item head">E</div>  
+  <div class="grid-item head">F</div>
+  <div class="grid-item head">G</div>
+  <div class="grid-item head">H</div>
+  <div class="grid-item head">I</div> 
+  <div class="grid-item head">1</div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item head">2</div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div> 
+  <div class="grid-item"></div>
+  <div class="grid-item head">3</div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item head">4</div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item head">5</div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item head">6</div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item head">7</div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item head">8</div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item head">9</div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-item head"></div>
+  <div class="grid-item head">A</div>
+  <div class="grid-item head">B</div>  
+  <div class="grid-item head">C</div>
+  <div class="grid-item head">D</div>
+  <div class="grid-item head">E</div>  
+  <div class="grid-item head">F</div>
+  <div class="grid-item head">G</div>
+  <div class="grid-item head">H</div>
+  <div class="grid-item head">I</div> 
+  <div class="grid-item head">1</div>
+  <div id="a1" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="b1" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="c1" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="d1" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="e1" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="f1" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="g1" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="h1" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="i1" class="grid-item" onclick="selectSquare(this)"></div>
+  <div class="grid-item head">2</div>
+  <div id="a2" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="b2" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="c2" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="d2" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="e2" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="f2" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="g2" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="h2" class="grid-item" onclick="selectSquare(this)"></div> 
+  <div id="i2" class="grid-item" onclick="selectSquare(this)"></div>
+  <div class="grid-item head">3</div>
+  <div id="a3" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="b3" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="c3" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="d3" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="e3" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="f3" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="g3" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="h3" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="i3" class="grid-item" onclick="selectSquare(this)"></div>
+  <div class="grid-item head">4</div>
+  <div id="a4" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="b4" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="c4" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="d4" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="e4" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="f4" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="g4" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="h4" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="i4" class="grid-item" onclick="selectSquare(this)"></div>
+  <div class="grid-item head">5</div>
+  <div id="a5" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="b5" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="c5" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="d5" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="e5" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="f5" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="g5" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="h5" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="i5" class="grid-item" onclick="selectSquare(this)"></div>
+  <div class="grid-item head">6</div>
+  <div id="a6" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="b6" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="c6" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="d6" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="e6" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="f6" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="g6" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="h6" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="i6" class="grid-item" onclick="selectSquare(this)"></div>
+  <div class="grid-item head">7</div>
+  <div id="a7" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="b7" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="c7" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="d7" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="e7" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="f7" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="g7" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="h7" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="i7" class="grid-item" onclick="selectSquare(this)"></div>
+  <div class="grid-item head">8</div>
+  <div id="a8" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="b8" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="c8" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="d8" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="e8" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="f8" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="g8" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="h8" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="i8" class="grid-item" onclick="selectSquare(this)"></div>
+  <div class="grid-item head">9</div>
+  <div id="a9" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="b9" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="c9" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="d9" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="e9" class="grid-item" onclick="selectSquare(this)"></div>  
+  <div id="f9" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="g9" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="h9" class="grid-item" onclick="selectSquare(this)"></div>
+  <div id="i9" class="grid-item" onclick="selectSquare(this)"></div>
+</div>
+
+<h2 id="info"></h2>
+
+</body>
+</html>
